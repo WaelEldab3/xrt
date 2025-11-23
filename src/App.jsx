@@ -20,7 +20,7 @@ function App() {
     <>
       <Top_Navbar
         email={"contact@example"}
-        address={"Welcome to our online store!"}
+        address={"Welcome to our online store !"}
       />
 
       <Switcher count={14} total={123.15} link={"https://google.com"}  setclickfun={setclickfun}/>
