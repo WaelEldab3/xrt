@@ -1,12 +1,12 @@
 import React from 'react'
 import './style.css'
-
+import {logo} from '../../../config/constants'
 export default function Middle_Bar_Lg(props) {
   return (
       <>
         <div className=" flex justify-between my-[30px]">
           <a href={props.link}>
-            <img src="/logo.svg" alt="" className='pl-[120px] '/>
+            <img src={logo} alt="system logo" className='pl-[120px] '/>
           </a>
           <div className="right_side flex cursor-pointer group pr-[120px]">
             <i className="fa-thin fa-bag-shopping text-gray-600 mt-[15px] text-[30px] group-hover:text-[#58d793] duration-200 "></i>
