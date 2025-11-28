@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { images_slider } from "../../config/constants";
-
+import Content from './Photo_Content';
 export default function Sliderfun() {
   const sliderHeight = 650;
 
@@ -17,12 +17,8 @@ export default function Sliderfun() {
     >
       {images_slider.map((current, id) => (
         <SwiperSlide key={id} className="h-full">
-          <img
-            src={current.src}
-            alt={current.alt || `slide-${id}`}
-            loading="lazy"
-            className="block w-full h-full object-cover object-center"
-          />
+      
+          <Content src={current.src} title={current.title} description={current.description} offer={current.offer} />
         </SwiperSlide>
       ))}
     </Swiper>

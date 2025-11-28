@@ -6,7 +6,7 @@ export default function Middle_Bar_Sm(props) {
         <div className="flex justify-between my-[30px] items-center">
           <i className="fa-light fa-bars pl-[10px] md:pl-[50px] text-gray-700 hover:text-gray-400 duration-300 text-[30px]" onClick={() => props.setclickfun()}></i>
           <a href={props.link}>
-            <img src={logo} alt="system logo" />
+            <img src={logo}  loading='lazy' alt="system logo" />
           </a>
           <div className="right_side flex cursor-pointer group pr-[10px] md:pr-[50px]">
             <i className="fa-thin fa-bag-shopping cursor-pointer text-gray-600 mt-[15px] text-[30px] group-hover:text-[#58d793] duration-200 "></i>

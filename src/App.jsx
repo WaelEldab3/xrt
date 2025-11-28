@@ -9,6 +9,8 @@ import SubNav from './Component/Nav/SubNav';
 import SideMenu from './Component/Nav/SideMenu';
 import { useState } from "react";
 import Sliderfun from './Component/Slider/Slider.jsx'
+import Categories from "./Component/Categories/Categories.jsx";
+import Card from './Component/Cards/Card';
 function App() {
   const [open,setopen] = useState(false);
   function setclickfun()
@@ -26,6 +28,8 @@ function App() {
       <Switcher count={14} total={123.15} link={"https://google.com"}  setclickfun={setclickfun}/>
       <SideMenu open={open} setclosefun={() => setopen(false)} />
       <Sliderfun/>
+      <Categories/>
+      <Card/>
       {/* <Middle_Bar_Sm click={click} setclickfun={setclickfun}/> */}
       {/* <Middle_Bar_Lg count={14} total={123.15} link={"https://google.com"}/> */}
       {/* <Middle_Bar_Sm count={12} total={13.25} link={"https://google.com"}/> */}
