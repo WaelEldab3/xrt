@@ -14,7 +14,7 @@ export default function Card() {
                             <div className='relative z-10'>
                                 <h2 className=' text-[24px] font-[700]  w-[160px] text-white '>{item.title}</h2>
                                 <h5 className='text-gray-400 text-[14px] font-[600] ' style={{color:item.offer_color}}>{item.offer}</h5>
-                                <p className='inline-block mt-[30px] text-white text-[14px] font-[600] group/btn relative'>Order Now 
+                                <p className='inline-block mt-[30px] text-white text-[14px] font-[600] group/btn relative cursor-pointer'>Order Now 
                                 <i class="fa-solid fa-arrow-right ml-1"></i>
                                 <span className="block w-0 border-b-2 border-white  transition-all duration-300 group-hover/btn:w-full absolute left-0"></span>
                                 </p>
