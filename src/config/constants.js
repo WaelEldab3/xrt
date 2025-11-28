@@ -106,19 +106,19 @@ export const cards_items =[
     {
         src:card1,
         title:"Fresh Vegetables",
-        offer:"- 15% Off",
+        offer:"- 15% OFF",
         offer_color:"#ffffff",
     },
     {
         src:card2,
         title:"Vegan Restaurants",
-        offer:"- 35% Off",
+        offer:"- 35% OFF",
         offer_color:"#CFF92F",
     },
     {
         src:card3,
         title:"Every Weekend",
-        offer:"- 25% Off",
-        offer_color:"#9B3532",
+        offer:"- 25% OFF",
+        offer_color:"#C73044",
     },
 ]

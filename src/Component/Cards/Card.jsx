@@ -8,10 +8,19 @@ export default function Card() {
             {
                 cards_items.map((item ,i) => {
                     return (
-                        <div key={i} className=' p-4 rounded-[10px] py-[88px] ' style={{backgroundImage:`url(${item.src})`}} >
-                            <h2 className='mt-4  font-semibold text-[15px]'>{item.title}</h2>
-                            <h5 className='text-gray-400' style={{color:item.offer_color}}>{item.offer}</h5>
+                        
+                        <div key={i} className=' p-8 rounded-[10px]  pb-[60px] relative group/card' style={{backgroundImage:`url(${item.src})`}} >
+                            <div className='absolute w-full h-full inset-0 bg-black opacity-0 group-hover/card:opacity-50  duration-300 rounded-[10px]'></div>
+                            <div className='relative z-10'>
+                                <h2 className=' text-[24px] font-[700]  w-[160px] text-white '>{item.title}</h2>
+                                <h5 className='text-gray-400 text-[14px] font-[600] ' style={{color:item.offer_color}}>{item.offer}</h5>
+                                <p className='inline-block mt-[30px] text-white text-[14px] font-[600] group/btn relative'>Order Now 
+                                <i class="fa-solid fa-arrow-right ml-1"></i>
+                                <span className="block w-0 border-b-2 border-white  transition-all duration-300 group-hover/btn:w-full absolute left-0"></span>
+                                </p>
+                            </div>
                         </div>
+                        
                     )
                 })
             }
