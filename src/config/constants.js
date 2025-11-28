@@ -1,5 +1,5 @@
 import slider1 from "../../src/assets/slider.jpg";
-import slider2 from "../../src/assets/slider2.jpg";
+import slider2 from "../../src/assets/slider2.png";
 import logo from "../../src/assets/logo.svg";
 import item1 from "../../src/assets/item1.png.webp";
 import item2 from "../../src/assets/item2.png.webp";
