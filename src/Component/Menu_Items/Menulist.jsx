@@ -70,6 +70,7 @@ export default function Menulist() {
         </button>
 
         <Swiper
+          rewind={true}
           modules={[Navigation]}
           navigation={{
             prevEl: ".menu-prev",
@@ -77,6 +78,8 @@ export default function Menulist() {
           }}
           spaceBetween={24}
           slidesPerView={4}
+          loop={filteredProducts.length > 4}         
+          loopAdditionalSlides={filteredProducts.length} 
         >
           {filteredProducts.map((product, key) => (
             <SwiperSlide key={key} className="flex justify-center">
