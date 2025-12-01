@@ -26,7 +26,7 @@ export default function ViewItems(props) {
           {props.product.name}
         </h3>
 
-        <div className="w-[250px] h-[40px] border-2 border-gray-100 rounded-2xl flex items-center justify-center group hover:bg-[#5C9963] duration-300 cursor-pointer mx-auto">
+        <div className="w-[250px] h-[40px] border-2 border-gray-100 rounded-full flex items-center justify-center group hover:bg-[#5C9963] duration-300 cursor-pointer mx-auto">
           <Handbag
             strokeWidth={0.8}
             size={20}

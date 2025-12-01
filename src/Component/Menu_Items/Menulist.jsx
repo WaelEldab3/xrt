@@ -48,6 +48,8 @@ export default function Menulist() {
             bg-white shadow-md border border-gray-200
             hover:bg-green-50
             transition
+            cursor-pointer
+
           "
         >
         <ChevronLeft className="w-6 h-6 text-green-700" />
@@ -64,6 +66,7 @@ export default function Menulist() {
             bg-white shadow-md border border-gray-200
             hover:bg-green-50
             transition
+            cursor-pointer
           "
         >
           <ChevronRight className="w-6 h-6 text-green-700" />
