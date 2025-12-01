@@ -78,8 +78,7 @@ export default function Menulist() {
           }}
           spaceBetween={24}
           slidesPerView={4}
-          loop={filteredProducts.length > 4}         
-          loopAdditionalSlides={filteredProducts.length} 
+          loop={true}
         >
           {filteredProducts.map((product, key) => (
             <SwiperSlide key={key} className="flex justify-center">
