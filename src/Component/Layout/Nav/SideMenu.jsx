@@ -1,6 +1,7 @@
 import React from 'react';
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion';
-import { nav_links } from './../../config/constants';
+import { nav_links } from '../../../config/constants';
 
 export default function SideMenu({ open, setclosefun }) {
   const variants = {

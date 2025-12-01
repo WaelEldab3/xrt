@@ -1,4 +1,13 @@
 @import "tailwindcss";
+
+
+@layer utilities {
+  .header-container {
+    @apply items-center justify-between px-4 md:px-14 lg:px-20;
+  }
+}
+
+
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
