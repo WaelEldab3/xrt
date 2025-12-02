@@ -9,7 +9,7 @@ export default function ViewMenuList({ item, active, setActive , key}) {
         ${
           active === item
             ? "bg-[#5C9963] text-white"
-            : "bg-[#F5F5F5] text-green-700"
+            : "bg-[#F5F5F5] text-[#5C9963]"
         }
       `}
     >
