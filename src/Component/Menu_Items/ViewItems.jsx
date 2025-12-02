@@ -38,7 +38,7 @@ export default function ViewItems({ product }) {
           </Dialog.Trigger>
 
           <div className="absolute -bottom-5 left-1/2 -translate-x-1/2">
-            <div className="flex items-center gap-1 px-4 py-1 rounded-full bg-green-600 text-white shadow-md">
+            <div className="flex items-center gap-1 px-4 py-1 rounded-full bg-[#5C9963] text-white shadow-md">
               <span className="text-[17px] font-bold">{product.price}</span>
             </div>
           </div>
@@ -48,7 +48,7 @@ export default function ViewItems({ product }) {
           {product.name}
         </h3>
 
-        <div className="w-[250px] h-[40px] border-2 border-gray-100 rounded-2xl flex items-center justify-center group hover:bg-[#5C9963] duration-300 cursor-pointer mx-auto">
+        <div className="w-[250px] h-[40px] border-2 border-gray-100 rounded-full flex items-center justify-center group hover:bg-[#5C9963] duration-300 cursor-pointer mx-auto">
           <Handbag
             strokeWidth={0.8}
             size={20}
@@ -107,7 +107,7 @@ export default function ViewItems({ product }) {
                 {product.name}
               </Dialog.Title>
 
-              <p className="text-green-700 text-2xl font-bold">
+              <p className="text-[#5C9963] text-2xl font-bold">
                 {product.price}
               </p>
 
@@ -115,7 +115,7 @@ export default function ViewItems({ product }) {
                 {product.description}
               </p>
 
-              <div className="w-[250px] h-[40px] border-2 border-gray-100 rounded-2xl flex items-center justify-center group hover:bg-[#5C9963] duration-300 cursor-pointer mx-auto">
+              <div className="w-[250px] h-[40px] border-2 border-gray-100 rounded-full flex items-center justify-center group hover:bg-[#5C9963] duration-300 cursor-pointer mx-auto">
                 <Handbag
                   strokeWidth={0.8}
                   size={20}
