@@ -75,7 +75,21 @@ export default function ViewItems({ product }) {
             overflow-auto
           "
         >
-          <Dialog.Close className="absolute top-4 right-4 text-2xl leading-none">
+          <Dialog.Close
+            className="
+            absolute top-4 right-4
+            text-3xl
+            leading-none
+            cursor-pointer
+            bg-transparent
+            border-none
+            outline-none
+            p-1
+            hover:text-gray-400
+            transition
+            duration-300
+          "
+          >
             &times;
           </Dialog.Close>
 
