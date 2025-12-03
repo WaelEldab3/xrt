@@ -1,9 +1,8 @@
 import React from "react";
 
-const CatCard = ({key, item}) => {
+const CatCard = ({ item}) => {
   return (
     <div
-      key={key}
       className=" p-4  rounded-full  lg:h-[130px] lg:w-[130px] md:w-[140px] md:h-[140px] w-[200px] h-[200px]"
       style={{ backgroundColor: item.bg }}
     >

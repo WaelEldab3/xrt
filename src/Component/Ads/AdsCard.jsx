@@ -1,9 +1,8 @@
 import React from "react";
 
-const AdsCard = ({ key, item }) => {
+const AdsCard = ({ item }) => {
   return (
     <div
-      key={key}
       className="bg-no-repeat p-8 rounded-[10px]  pb-[60px] relative group/card md:w-[320px] xl:w-[380px] xl:h-[250px] lg:w-[450px] lg:h-[250px] md:h-[200px] w-[380px] h-[250px] "
       style={{ backgroundImage: `url(${item.src})` }}
     >
@@ -20,7 +19,7 @@ const AdsCard = ({ key, item }) => {
         </h5>
         <p className="inline-block mt-[30px] text-white text-[14px] font-[600] group/btn relative cursor-pointer">
           Order Now
-          <i class="fa-solid fa-arrow-right ml-1 group-hover/btn:ml-5 duration-300"></i>
+          <i className="fa-solid fa-arrow-right ml-1 group-hover/btn:ml-5 duration-300"></i>
           <span className="block w-0 border-b-2 border-white  transition-all duration-300 group-hover/btn:w-full absolute left-0"></span>
         </p>
       </div>

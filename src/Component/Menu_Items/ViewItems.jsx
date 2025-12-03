@@ -1,4 +1,3 @@
-// ViewItems.jsx
 import React from "react";
 import { Handbag, Eye } from "lucide-react";
 import * as Dialog from "@radix-ui/react-dialog";

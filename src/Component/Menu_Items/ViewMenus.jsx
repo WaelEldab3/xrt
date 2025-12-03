@@ -1,9 +1,8 @@
 import React from "react";
 
-export default function ViewMenuList({ item, active, setActive , key}) {
+export default function ViewMenuList({ item, active, setActive}) {
   return (
     <button
-      key={key}
       onClick={() => setActive(item)}
       className={`px-5 py-1.5 cursor-pointer rounded-full text-sm font-medium transition-all
         ${
