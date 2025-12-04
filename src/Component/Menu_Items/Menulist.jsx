@@ -46,12 +46,32 @@ export default function Menulist() {
         )}
       </div>
 
-      {filteredProducts.length > viewCount && (
-        <button onClick={() => setViewCount(viewCount + 4)} className=" text-2xl text-gray-400 hover:text-gray-600 transition-all duration-200">
-          <ChevronRight />
-          Show More
+      <div className="flex items-center gap-2 justify-center pb-25">
+      {viewCount > 4 && (
+        <button onClick={() => setViewCount(viewCount - 4)} className="w-[250px] h-[40px] border-2 border-gray-100 rounded-full flex items-center justify-center group hover:bg-[#5C9963] duration-300 cursor-pointer">
+          <ChevronLeft  
+            strokeWidth={0.8}
+            size={20}
+            className="text-[#737574] group-hover:text-white duration-300 translate-y-0.5 group-hover:translate-x-1.5"
+          />
+          <span className="ml-3 text-[#737574] group-hover:text-white duration-300">
+            View Less
+          </span>
         </button>
       )}
+          {filteredProducts.length > viewCount && (
+          <button onClick={() => setViewCount(viewCount + 4)} className="w-[250px] h-[40px] border-2 border-gray-100 rounded-full flex items-center justify-center group hover:bg-[#5C9963] duration-300 cursor-pointer">
+            <span className="ml-3 text-[#737574] group-hover:text-white duration-300">
+              View More
+            </span>
+            <ChevronRight  
+              strokeWidth={0.8}
+              size={20}
+              className="text-[#737574] group-hover:text-white duration-300 translate-y-0.5 group-hover:translate-x-1.5"
+            />
+          </button>
+        )}
+      </div>
     </div>
   );
 }

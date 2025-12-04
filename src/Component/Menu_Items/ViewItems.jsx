@@ -47,7 +47,7 @@ export default function ViewItems({ product }) {
           {product.name}
         </h3>
 
-        <div className="w-[250px] h-[40px] border-2 border-gray-100 rounded-full flex items-center justify-center group hover:bg-[#5C9963] duration-300 cursor-pointer mx-auto">
+        <div className="w-[250px] h-[40px] border-2  border-gray-100 rounded-full flex items-center justify-center group hover:bg-[#5C9963] duration-300 cursor-pointer mx-auto">
           <Handbag
             strokeWidth={0.8}
             size={20}
@@ -113,7 +113,8 @@ export default function ViewItems({ product }) {
               <p className="text-sm text-gray-600 leading-relaxed">
                 {product.description}
               </p>
-
+              <div className="flex justify-around">
+                <input type="number" className="w-[60px] h-[40px] border-2 border-gray-100 rounded-[10px] text-center caret-transparent" defaultValue={1} />
               <div className="w-[250px] h-[40px] border-2 border-gray-100 rounded-full flex items-center justify-center group hover:bg-[#5C9963] duration-300 cursor-pointer mx-auto">
                 <Handbag
                   strokeWidth={0.8}
@@ -121,13 +122,14 @@ export default function ViewItems({ product }) {
                   className="text-[#5C9963] group-hover:text-white duration-300"
                 />
                 <h5 className="ml-3 text-[#737574] group-hover:text-white duration-300">
-                  Order Now
+                  Add to Cart
                 </h5>
+              </div>
               </div>
             </div>
           </div>
         </Dialog.Content>
       </Dialog.Portal>
-    </Dialog.Root>
+    </Dialog.Root> 
   );
 }
