@@ -29,6 +29,34 @@ import product15 from "../assets/images/Menu_Items/pro-31-600x600.jpg";
 import product16 from "../assets/images/Menu_Items/pro-32-600x600.jpg";
 import product17 from "../assets/images/Menu_Items/pro-34-600x600.jpg";
 import product18 from "../assets/images/Menu_Items/pro-36-600x600.jpg";
+import product19 from "../assets/images/Menu_Items/pro-37-600x600.jpg";
+import product20 from "../assets/images/Menu_Items/pro-38-600x600.jpg";
+import product21 from "../assets/images/Menu_Items/pro-39-600x600.jpg";
+import product22 from "../assets/images/Menu_Items/pro-40-600x600.jpg";
+import product23 from "../assets/images/Menu_Items/pro-4-600x600.jpg";
+import product24 from "../assets/images/Menu_Items/pro-5-600x600.jpg";
+import product25 from "../assets/images/Menu_Items/pro-6-600x600.jpg";
+import product26 from "../assets/images/Menu_Items/pro-7-600x600.jpg";
+import product27 from "../assets/images/Menu_Items/pro-8-600x600.jpg";
+import product28 from "../assets/images/Menu_Items/pro-9-600x600.jpg";
+import product29 from "../assets/images/Menu_Items/pro-3-600x600.jpg";
+
+import coupon1 from "../assets/images/offers/item2.png.webp"
+
+{/*toprated*/}
+import topitem1 from "../assets/images/Top_Rated/item1.jpg.webp"
+import topitem2 from "../assets/images/Top_Rated/item2.jpg.webp"
+import topitem3 from "../assets/images/Top_Rated/item3.jpg.webp"
+import topitem4 from "../assets/images/Top_Rated/item4.jpg.webp"
+import topitem5 from "../assets/images/Top_Rated/item5.jpg.webp"
+
+import Testimonial from "../assets/images/Testimonials/bg_Testimonials.jpg.webp";
+import image1 from "../assets/images/Testimonials/person1.png.webp";
+import image2 from "../assets/images/Testimonials/person2.png.webp";
+import Contact from "../pages/Contact";
+import Home from "../pages/Home";
+
+
 
 export { logo };
 
@@ -43,7 +71,19 @@ export const nav_links = [
     path: "/contact",
     arrow: false,
   },
+  
 ];
+
+export const routes = [
+  {
+    path: "/",
+    element: <Home />
+  },
+  {
+    path: "/contact",
+    element: <Contact />
+  }
+]
 
 export const images_slider = [
   {
@@ -141,7 +181,7 @@ export const cards_items = [
     offer_color: "#C73044",
   },
 ];
-export const Menus = ["All", "Vegetables", "Fruits", "Bread", "Meat"];
+export const Menus = ["Pizza", "Vegetables", "Fruits", "Bread", "Meat"];
 export const products = [
   {
     id: 1,
@@ -268,7 +308,7 @@ export const products = [
     src: product16,
     name: "Steers Tomato Pack 375ml",
     price: "£36.26",
-    category: "Meat",
+    category: "Pizza",
     description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
@@ -276,7 +316,7 @@ export const products = [
     src: product17,
     name: "Large Queen Apple",
     price: "£234.81",
-    category: "Meat",
+    category: "Pizza",
     description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
@@ -284,8 +324,181 @@ export const products = [
     src: product18,
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
-    category: "Meat",
+    category: "Pizza",
     description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
+  {
+    id: 19,
+    src: product19,
+    name: "Mixed Chillies Pack 500g",
+    price: "£164.53",
+    category: "Pizza",
+    description:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+  },
+  {
+    id: 20,
+    src: product20,
+    name: "Mixed Chillies Pack 500g",
+    price: "£164.53",
+    category: "Pizza",
+    description:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+  },
+  {
+    id: 21,
+    src: product21,
+    name: "Mixed Chillies Pack 500g",
+    price: "£164.53",
+    category: "Pizza",
+    description:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+  },
+  {
+    id: 22,
+    src: product22,
+    name: "Mixed Chillies Pack 500g",
+    price: "£164.53",
+    category: "Meat",
+    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+  },
+  {
+    id: 23,
+    src: product23,
+    name: "Mixed Chillies Pack 500g",
+    price: "£164.53",
+    category: "Meat",
+    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+  },
+  {
+    id:   24,
+    src: product24,
+    name: "Mixed Chillies Pack 500g",
+    price: "£164.53",
+    category: "Meat",
+    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+  },
+  {
+    id: 25,
+    src: product25,
+    name: "Mixed Chillies Pack 500g",
+    price: "£164.53",
+    category: "Meat",
+    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+  },
+  {
+    id: 26,
+    src: product26,
+    name: "Mixed Chillies Pack 500g",
+    price: "£164.53",
+    category: "Meat",
+    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+  },
+  {
+    id: 27,
+    src: product27,
+    name: "Mixed Chillies Pack 500g",
+    price: "£164.53",
+    category: "Meat",
+    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+  },
+  {
+    id: 28,
+    src: product28,
+    name: "Mixed Chillies Pack 500g",
+    price: "£164.53",
+    category: "Pizza",
+    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+  },
+  {
+    id: 29,
+    src: product29,
+    name: "Mixed Chillies Pack 500g",
+    price: "£164.53",
+    category: "Meat",
+    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+  },
 ];
+
+export const coupons={
+  ProductName:"Fresh Fruits",
+  src:coupon1,
+  offer:"50%",
+}
+
+export const Top_Rated_Items=[
+  {
+    src:topitem1,
+    name:"Soup & Stew Mix Pack 1.5kg",
+    price:"£746.64",
+    offer:"£546.64"
+  },
+  {
+    src:topitem2,
+    name:"Kiwi Fruit Single",
+    price:"£746.64",
+    offer:"£546.64"
+  },
+  {
+    src:topitem3,
+    name:"Mixed Chillies Pack 500g",
+    price:"£746.64",
+    offer:"£546.64"
+  },
+  {
+    src:topitem4,
+    name:"Large Queen Apple",
+    price:"£746.64",
+    offer:"£546.64"
+  },
+  {
+    src:topitem5,
+    name:"Papaya Single",
+    price:"£746.64",
+    offer:"£546.64"
+  },
+  {
+    src:topitem1,
+    name:"Soup & Stew Mix Pack 1.5kg",
+    price:"£746.64",
+    offer:"£546.64"
+  },
+  {
+    src:topitem2,
+    name:"Kiwi Fruit Single",
+    price:"£746.64",
+    offer:"£546.64"
+  },
+  {
+    src:topitem3,
+    name:"Mixed Chillies Pack 500g",
+    price:"£746.64",
+    offer:"£546.64"
+  },
+  {
+    src:topitem4,
+    name:"Large Queen Apple",
+    price:"£746.64",
+    offer:"£546.64"
+  },
+]
+
+export const Testimonials_bg=
+{
+    src:Testimonial,
+}
+export const Testimonials_content=[
+  {
+    image:image1,
+    name:"Rahab Munir",
+    feedback:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with testimonial description from your data.",
+    Role:"The Body Shop"
+  },
+  {
+    image:image2,
+    name:"Rose Smith",
+    feedback:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with testimonial description from your data.",
+    Role:"The Body Shop"
+  },
+]

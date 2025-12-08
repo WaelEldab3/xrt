@@ -2,6 +2,7 @@ import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion';
 import { nav_links } from '../../../config/constants';
+import { Link } from 'react-router-dom';
 
 export default function SideMenu({ open, setclosefun }) {
   const variants = {
@@ -52,7 +53,7 @@ export default function SideMenu({ open, setclosefun }) {
               <ul>
                 {nav_links.map(link => (
                   <li key={link.name} className="ml-[30px] flex justify-between w-[230px] mt-2 mb-4 text-black cursor-pointer group relative font-[400]">
-                    <a href={link.path}>{link.name}</a>
+                    <Link to={link.path}>{link.name}</Link>
                     <i className='fa-thin fa-chevron-down'></i>
                     <span className="block w-0 border-b-[1px] border-white transition-all duration-300 group-hover:w-full absolute left-0 -bottom-1"></span>
                   </li>

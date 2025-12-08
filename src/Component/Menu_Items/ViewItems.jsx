@@ -114,22 +114,53 @@ export default function ViewItems({ product }) {
                 {product.description}
               </p>
               <div className="flex justify-around">
-                <input type="number" className="w-[60px] h-[40px] border-2 border-gray-100 rounded-[10px] text-center caret-transparent" defaultValue={1} />
-              <div className="w-[250px] h-[40px] border-2 border-gray-100 rounded-full flex items-center justify-center group hover:bg-[#5C9963] duration-300 cursor-pointer mx-auto">
-                <Handbag
-                  strokeWidth={0.8}
-                  size={20}
-                  className="text-[#5C9963] group-hover:text-white duration-300"
-                />
-                <h5 className="ml-3 text-[#737574] group-hover:text-white duration-300">
-                  Add to Cart
-                </h5>
-              </div>
+                <div className="flex items-center gap-2">
+                  <div className="flex items-center w-[70px] h-[40px] border-2 border-gray-200 rounded-[10px] overflow-hidden">
+                    <button
+                      onClick={() => {
+                        const input = document.getElementById("qty");
+                        input.value = Math.max(1, Number(input.value) - 1);
+                      }}
+                      className="w-10 h-full flex items-center pb-1 justify-center text-xl font-bold text-gray-600 hover:bg-gray-100"
+                    >
+                      -
+                    </button>
+
+                    <input
+                      id="qty"
+                      type="number"
+                      defaultValue={1}
+                      className="w-full h-full text-center outline-none border-none [appearance:textfield] caret-transparent "
+                    />
+
+                    
+                    <button
+                      onClick={() => {
+                        const input = document.getElementById("qty");
+                        input.value = Number(input.value) + 1;
+                      }}
+                      className="w-10 h-full flex pb-0.5 items-center justify-center text-xl font-bold text-gray-600 hover:bg-gray-100"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+
+                <div className="w-[250px] h-[40px] border-2 border-gray-100 rounded-full flex items-center justify-center group hover:bg-[#5C9963] duration-300 cursor-pointer mx-auto">
+                  <Handbag
+                    strokeWidth={0.8}
+                    size={20}
+                    className="text-[#5C9963] group-hover:text-white duration-300"
+                  />
+                  <h5 className="ml-3 text-[#737574] group-hover:text-white duration-300">
+                    Add to Cart
+                  </h5>
+                </div>
               </div>
             </div>
           </div>
         </Dialog.Content>
       </Dialog.Portal>
-    </Dialog.Root> 
+    </Dialog.Root>
   );
 }
