@@ -41,49 +41,61 @@ import product27 from "../assets/images/Menu_Items/pro-8-600x600.jpg";
 import product28 from "../assets/images/Menu_Items/pro-9-600x600.jpg";
 import product29 from "../assets/images/Menu_Items/pro-3-600x600.jpg";
 
-import coupon1 from "../assets/images/offers/item2.png.webp"
+import coupon1 from "../assets/images/offers/item2.png.webp";
 
-{/*toprated*/}
-import topitem1 from "../assets/images/Top_Rated/item1.jpg.webp"
-import topitem2 from "../assets/images/Top_Rated/item2.jpg.webp"
-import topitem3 from "../assets/images/Top_Rated/item3.jpg.webp"
-import topitem4 from "../assets/images/Top_Rated/item4.jpg.webp"
-import topitem5 from "../assets/images/Top_Rated/item5.jpg.webp"
+{
+  /*toprated*/
+}
+import topitem1 from "../assets/images/Top_Rated/item1.jpg.webp";
+import topitem2 from "../assets/images/Top_Rated/item2.jpg.webp";
+import topitem3 from "../assets/images/Top_Rated/item3.jpg.webp";
+import topitem4 from "../assets/images/Top_Rated/item4.jpg.webp";
+import topitem5 from "../assets/images/Top_Rated/item5.jpg.webp";
 
 import Testimonial from "../assets/images/Testimonials/bg_Testimonials.jpg.webp";
 import image1 from "../assets/images/Testimonials/person1.png.webp";
 import image2 from "../assets/images/Testimonials/person2.png.webp";
 import Contact from "../pages/Contact";
 import Home from "../pages/Home";
+import Menu from "../pages/Menu";
 
-
+import footer from "../assets/images/footer/imgi_134_footer_bg.png.webp"
+import payment from "../assets/images/footer/footer_01-2.png.webp"
 
 export { logo };
 
 export const nav_links = [
   {
-    name: "Menu",
+    name: "Home",
     path: "/",
-    arrow: true,
+    arrow: false,
   },
   {
     name: "Contact",
     path: "/contact",
     arrow: false,
   },
-  
+  {
+    name: "Menu",
+    path: "/menu",
+    arrow: false,
+  },
 ];
 
 export const routes = [
   {
     path: "/",
-    element: <Home />
+    element: <Home />,
   },
   {
     path: "/contact",
-    element: <Contact />
+    element: <Contact />,
+  },
+  {
+    path:"/menu",
+    element:<Menu/>
   }
-]
+];
 
 export const images_slider = [
   {
@@ -189,7 +201,8 @@ export const products = [
     name: "Papaya Single",
     price: "£746.64",
     category: "Fruits",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 2,
@@ -197,7 +210,8 @@ export const products = [
     name: "Papaya SingleCauliflower Pack 350g",
     price: "£74.61",
     category: "Fruits",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 3,
@@ -205,7 +219,8 @@ export const products = [
     name: "Kiwi Fruit Single",
     price: "£414.14",
     category: "Fruits",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 4,
@@ -213,7 +228,8 @@ export const products = [
     name: "Large Queen Apple",
     price: "£284.12",
     category: "Fruits",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 5,
@@ -221,7 +237,8 @@ export const products = [
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
     category: "Vegetables",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 6,
@@ -229,7 +246,8 @@ export const products = [
     name: "Cauliflower Pack 350g",
     price: "£324.45",
     category: "Vegetables",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 7,
@@ -237,7 +255,8 @@ export const products = [
     name: "Freshmark Cut Spinach",
     price: "£411.87",
     category: "Vegetables",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 8,
@@ -245,7 +264,8 @@ export const products = [
     name: "Steers Tomato Pack 375ml",
     price: "£64.90",
     category: "Vegetables",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 9,
@@ -253,7 +273,8 @@ export const products = [
     name: "Kiwi Fruit Single",
     price: "£414.14",
     category: "Bread",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 10,
@@ -261,7 +282,8 @@ export const products = [
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
     category: "Bread",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 11,
@@ -269,7 +291,8 @@ export const products = [
     name: "East Coast Small Solo Fish",
     price: "£814.21",
     category: "Bread",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 12,
@@ -277,7 +300,8 @@ export const products = [
     name: "Papaya Single",
     price: "£204.19",
     category: "Bread",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 13,
@@ -285,7 +309,8 @@ export const products = [
     name: "Large Queen Apple",
     price: "£903.62",
     category: "Bread",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 14,
@@ -293,7 +318,8 @@ export const products = [
     name: "Mixed Chillies Pack 500g",
     price: "£674.89",
     category: "Bread",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 15,
@@ -301,7 +327,8 @@ export const products = [
     name: "Freshmark Cut Spinach",
     price: "£134.60",
     category: "Vegetables",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 16,
@@ -309,7 +336,8 @@ export const products = [
     name: "Steers Tomato Pack 375ml",
     price: "£36.26",
     category: "Pizza",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 17,
@@ -317,7 +345,8 @@ export const products = [
     name: "Large Queen Apple",
     price: "£234.81",
     category: "Pizza",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 18,
@@ -326,7 +355,7 @@ export const products = [
     price: "£164.53",
     category: "Pizza",
     description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 19,
@@ -335,7 +364,7 @@ export const products = [
     price: "£164.53",
     category: "Pizza",
     description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 20,
@@ -344,7 +373,7 @@ export const products = [
     price: "£164.53",
     category: "Pizza",
     description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 21,
@@ -353,7 +382,7 @@ export const products = [
     price: "£164.53",
     category: "Pizza",
     description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 22,
@@ -361,7 +390,8 @@ export const products = [
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
     category: "Meat",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 23,
@@ -369,15 +399,17 @@ export const products = [
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
     category: "Meat",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
-    id:   24,
+    id: 24,
     src: product24,
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
     category: "Meat",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 25,
@@ -385,7 +417,8 @@ export const products = [
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
     category: "Meat",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 26,
@@ -393,7 +426,8 @@ export const products = [
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
     category: "Meat",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 27,
@@ -401,7 +435,8 @@ export const products = [
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
     category: "Meat",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 28,
@@ -409,7 +444,8 @@ export const products = [
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
     category: "Pizza",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
   {
     id: 29,
@@ -417,88 +453,117 @@ export const products = [
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
     category: "Meat",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
 ];
 
-export const coupons={
-  ProductName:"Fresh Fruits",
-  src:coupon1,
-  offer:"50%",
-}
+export const coupons = {
+  ProductName: "Fresh Fruits",
+  src: coupon1,
+  offer: "50%",
+};
 
-export const Top_Rated_Items=[
+export const Top_Rated_Items = [
   {
-    src:topitem1,
-    name:"Soup & Stew Mix Pack 1.5kg",
-    price:"£746.64",
-    offer:"£546.64"
+    src: topitem1,
+    name: "Soup & Stew Mix Pack 1.5kg",
+    price: "£746.64",
+    offer: "£546.64",
   },
   {
-    src:topitem2,
-    name:"Kiwi Fruit Single",
-    price:"£746.64",
-    offer:"£546.64"
+    src: topitem2,
+    name: "Kiwi Fruit Single",
+    price: "£746.64",
+    offer: "£546.64",
   },
   {
-    src:topitem3,
-    name:"Mixed Chillies Pack 500g",
-    price:"£746.64",
-    offer:"£546.64"
+    src: topitem3,
+    name: "Mixed Chillies Pack 500g",
+    price: "£746.64",
+    offer: "£546.64",
   },
   {
-    src:topitem4,
-    name:"Large Queen Apple",
-    price:"£746.64",
-    offer:"£546.64"
+    src: topitem4,
+    name: "Large Queen Apple",
+    price: "£746.64",
+    offer: "£546.64",
   },
   {
-    src:topitem5,
-    name:"Papaya Single",
-    price:"£746.64",
-    offer:"£546.64"
+    src: topitem5,
+    name: "Papaya Single",
+    price: "£746.64",
+    offer: "£546.64",
   },
   {
-    src:topitem1,
-    name:"Soup & Stew Mix Pack 1.5kg",
-    price:"£746.64",
-    offer:"£546.64"
+    src: topitem1,
+    name: "Soup & Stew Mix Pack 1.5kg",
+    price: "£746.64",
+    offer: "£546.64",
   },
   {
-    src:topitem2,
-    name:"Kiwi Fruit Single",
-    price:"£746.64",
-    offer:"£546.64"
+    src: topitem2,
+    name: "Kiwi Fruit Single",
+    price: "£746.64",
+    offer: "£546.64",
   },
   {
-    src:topitem3,
-    name:"Mixed Chillies Pack 500g",
-    price:"£746.64",
-    offer:"£546.64"
+    src: topitem3,
+    name: "Mixed Chillies Pack 500g",
+    price: "£746.64",
+    offer: "£546.64",
   },
   {
-    src:topitem4,
-    name:"Large Queen Apple",
-    price:"£746.64",
-    offer:"£546.64"
+    src: topitem4,
+    name: "Large Queen Apple",
+    price: "£746.64",
+    offer: "£546.64",
   },
-]
+];
 
-export const Testimonials_bg=
+export const Testimonials_bg = {
+  src: Testimonial,
+};
+export const Testimonials_content = [
+  {
+    image: image1,
+    name: "Rahab Munir",
+    feedback:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with testimonial description from your data.",
+    Role: "The Body Shop",
+  },
+  {
+    image: image2,
+    name: "Rose Smith",
+    feedback:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with testimonial description from your data.",
+    Role: "The Body Shop",
+  },
+];
+
+export const footer_image =
 {
-    src:Testimonial,
+  bg: footer,
+  pay:payment
 }
-export const Testimonials_content=[
-  {
-    image:image1,
-    name:"Rahab Munir",
-    feedback:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with testimonial description from your data.",
-    Role:"The Body Shop"
-  },
-  {
-    image:image2,
-    name:"Rose Smith",
-    feedback:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with testimonial description from your data.",
-    Role:"The Body Shop"
-  },
-]
+
+export const STORE_LOCATION = {
+  location: "9066 Green Lake Drive Chevy Chase, MD 20815",
+  mail: "contact@example.com",
+  phone: "(1800)-88-66-991",
+};
+export const INFORMATION = [
+  "About Us",
+  "Blog",
+  "Check Out",
+  "Contact",
+  "Service",
+];
+export const MY_ACCOUNT = ["My Account", "Contact", "Shopping Cart", "Shop"];
+export const CATEGORIES_Footer = [
+  "Fruits & Vegetables",
+  "Dairy Products",
+  "Package Foods",
+  "Beverage",
+  "Health & Wellness",
+];

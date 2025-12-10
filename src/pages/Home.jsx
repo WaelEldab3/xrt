@@ -5,6 +5,7 @@ import AdsList from "../Component/Ads/AdsList";
 import Menulist from "../Component/Menu_Items/Menulist";
 import TopRated from "../Component/TopRated/TopRated";
 import Testimonials from "../Component/Testimonials/Testimonials";
+import FooterSection from "../Component/Footer/FooterSection";
 
 const Home = () => {
   return (

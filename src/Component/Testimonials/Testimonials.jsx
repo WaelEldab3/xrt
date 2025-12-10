@@ -14,7 +14,7 @@ import ViewTestimonials from "./ViewTestimonials";
 export default function Testimonials() {
   return (
     <div
-      className="relative w-full h-[500px] bg-cover bg-center py-[80px] my-[100px] flex justify-center"
+      className="relative w-full h-[500px] bg-cover bg-center py-[80px]  flex justify-center"
       style={{ backgroundImage: `url(${Testimonials_bg.src})` }}
     >
       <button

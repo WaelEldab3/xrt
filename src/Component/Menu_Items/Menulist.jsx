@@ -15,7 +15,7 @@ export default function Menulist() {
   const filteredProducts = products.filter((product) => product.category === active);
 
   return (
-    <div className="px-[70px] mt-4">
+    <div className="px-[70px] mt-4 pb-10">
       <h2 className="text-3xl font-[700] text-[#2F3E30] mb-3">Menu List</h2>
       <div className="flex items-center gap-6 mb-6">
         <div className="relative flex-1 h-[2px] bg-gray-200">
@@ -43,7 +43,7 @@ export default function Menulist() {
         )}
       </div>
 
-      <button className="w-[250px] h-[40px] border-2 border-gray-100 rounded-full flex items-center mx-auto justify-center group hover:bg-[#5C9963] duration-300 cursor-pointer">
+      <button className="w-[250px] h-[40px] border-2 border-gray-100 rounded-full flex items-center mx-auto justify-center group  hover:bg-[#5C9963] duration-300 cursor-pointer">
         <span className="ml-3 text-[#737574] group-hover:text-white duration-300">
           View More
         </span>
