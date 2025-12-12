@@ -3,10 +3,10 @@ import React from "react";
 const AdsCard = ({ item }) => {
   return (
     <div
-      className="bg-no-repeat p-8 rounded-[10px]  pb-[60px] relative group/card md:w-[320px] xl:w-[380px] xl:h-[250px] lg:w-[450px] lg:h-[250px] md:h-[200px] w-[380px] h-[250px] "
+      className="bg-no-repeat p-8 rounded-[10px]  pb-[60px] relative group/card md:w-[70%] md:h-[100%] xl:w-[88%] xl:h-[100%] "
       style={{ backgroundImage: `url(${item.src})` }}
     >
-      <div className="absolute md:w-[320px] md:h-[200px] lg:w-[411px]  lg:h-[240px] xl:w-[380px]  w-[381px] h-[240px] inset-0 bg-black opacity-0 group-hover/card:opacity-50  duration-300 rounded-[10px]"></div>
+      <div className="absolute xl:w-[100%] xl:h-[100%] inset-0 bg-black opacity-0 group-hover/card:opacity-50  duration-300 rounded-[10px]"></div>
       <div className="relative z-10">
         <h2 className=" text-[24px] font-[700]  w-[160px] text-white ">
           {item.title}

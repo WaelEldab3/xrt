@@ -1,10 +1,10 @@
 import React from 'react'
-import { INFORMATION } from '../../config/constants'
+import { CATEGORIES_Footer_2 } from '../../config/constants'
 
-export default function Information() {
+export default function Categories_2() {
   return (
     <>
-        {INFORMATION.map((info, index) => (
+        {CATEGORIES_Footer_2.map((info, index) => (
             <li key={index} className="text-[#E1E1E1] py-1 text-[17px]">{info}</li>
         ))}
     </>

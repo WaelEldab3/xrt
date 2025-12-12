@@ -71,13 +71,13 @@ export const nav_links = [
     arrow: false,
   },
   {
-    name: "Contact",
-    path: "/contact",
+    name: "Menu",
+    path: "/menu",
     arrow: false,
   },
   {
-    name: "Menu",
-    path: "/menu",
+    name: "Contact",
+    path: "/contact",
     arrow: false,
   },
 ];
@@ -552,18 +552,24 @@ export const STORE_LOCATION = {
   mail: "contact@example.com",
   phone: "(1800)-88-66-991",
 };
-export const INFORMATION = [
-  "About Us",
-  "Blog",
-  "Check Out",
-  "Contact",
-  "Service",
-];
+
 export const MY_ACCOUNT = ["My Account", "Contact", "Shopping Cart", "Shop"];
 export const CATEGORIES_Footer = [
-  "Fruits & Vegetables",
-  "Dairy Products",
-  "Package Foods",
-  "Beverage",
-  "Health & Wellness",
+  "Pizza",
+  "Calzones",
+  "Hot Subs",
+  "Cold Subs",
+  "Wraps",
+  "Appetizers",
+  "Salads",
+  "Desserts",
+];
+export const CATEGORIES_Footer_2 = [
+  "Pasta Dinners",
+  "Dinner Plates",
+  "Burgers",
+  "Side Orders",
+  "Combos",
+  "Kids’ Meals",
+  "Beverages",
 ];
