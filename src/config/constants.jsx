@@ -61,6 +61,7 @@ import Menu from "../pages/Menu";
 
 import footer from "../assets/images/footer/imgi_134_footer_bg.png.webp"
 import payment from "../assets/images/footer/footer_01-2.png.webp"
+import { a } from "framer-motion/client";
 
 export { logo };
 
@@ -573,3 +574,13 @@ export const CATEGORIES_Footer_2 = [
   "Kids’ Meals",
   "Beverages",
 ];
+
+
+//contact page
+export const CONTACT_INFO = {
+  address: "272 Rodney St, Brooklyn, NY 11211 76 East Houston Street New York",
+  hotline: "1900 26886",
+  phone: "(1800)-88-66-991",
+  email: "hello@organey.com",
+  working_time:["Monday - Friday: 08:30 - 20:00","Saturday & Sunday: 09:30 - 21:30"],
+}
