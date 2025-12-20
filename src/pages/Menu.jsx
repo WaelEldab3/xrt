@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useRef } from "react";
 import { Categories_items, products as originalProducts } from "../config/constants";
 import Menulist from "../Component/Menu_Items/Menulist";
 import MenuItemCard from "../Component/Menu_Items/MenuItemCard";
@@ -6,6 +6,7 @@ import { Pizza, Cookie, Carrot, Apple, Drumstick, Utensils } from "lucide-react"
 
 export default function Menu() {
   const [activeCategory, setActiveCategory] = useState("Marrow");
+  const menuListRef = useRef(null);
 
   // Helper to get icon for mobile view
   const getCategoryIcon = (name) => {
@@ -16,6 +17,14 @@ export default function Menu() {
       case "Cookies": return <Cookie className="w-6 h-6 text-[#5C9963]" />;
       case "Vegan Cuisine": return <Pizza className="w-6 h-6 text-[#5C9963]" />;
       default: return <Utensils className="w-6 h-6 text-[#5C9963]" />;
+    }
+  };
+
+  const handleCategoryClick = (categoryName) => {
+    setActiveCategory(categoryName);
+    // Scroll to menu list with a small offset for better visibility
+    if (menuListRef.current) {
+      menuListRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
@@ -60,7 +69,7 @@ export default function Menu() {
           {Categories_items.map((item, i) => (
             <div
               key={i}
-              onClick={() => setActiveCategory(item.name)}
+              onClick={() => handleCategoryClick(item.name)}
               className="cursor-pointer transition-transform hover:scale-105 w-full flex justify-center"
             >
               {/* Desktop View (Original) */}
@@ -91,17 +100,20 @@ export default function Menu() {
           ))}
         </div>
       </div>
-      <Menulist
-        key={activeCategory}
-        initialCategory={activeCategory}
-        variant="full"
-        showPagination={true}
-        itemsPerPage={8}
-        hideFilter={true}
-        products={menuProducts}
-        ItemComponent={MenuItemCard}
-        hideCountText={true}
-      />
+      
+      <div ref={menuListRef} className="scroll-mt-4">
+        <Menulist
+          key={activeCategory}
+          initialCategory={activeCategory}
+          variant="full"
+          showPagination={true}
+          itemsPerPage={8}
+          hideFilter={true}
+          products={menuProducts}
+          ItemComponent={MenuItemCard}
+          hideCountText={true}
+        />
+      </div>
     </div>
   );
 }

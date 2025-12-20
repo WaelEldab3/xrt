@@ -1,8 +1,15 @@
 import React from "react";
 import { Handbag, Eye, Utensils, X } from "lucide-react";
 import * as Dialog from "@radix-ui/react-dialog";
+import { useNavigate } from "react-router-dom";
 
 export default function MenuItemCard({ product }) {
+  const navigate = useNavigate();
+  
+  const handleCustomize = () => {
+     navigate('/customize', { state: { product } });
+  };
+
   return (
     <Dialog.Root>
       {/* Desktop Layout */}
@@ -51,7 +58,9 @@ export default function MenuItemCard({ product }) {
         {/* Action Buttons */}
         <div className="flex flex-col gap-2">
           {/* Customize It Button */}
-          <div className="w-[250px] h-[40px] border-2 border-gray-100 rounded-full flex items-center justify-center group hover:bg-[#5C9963] duration-300 cursor-pointer mx-auto">
+          <div 
+             onClick={handleCustomize}
+             className="w-[250px] h-[40px] border-2 border-gray-100 rounded-full flex items-center justify-center group hover:bg-[#5C9963] duration-300 cursor-pointer mx-auto">
             <Utensils
               strokeWidth={0.8}
               size={20}
@@ -109,7 +118,9 @@ export default function MenuItemCard({ product }) {
 
           <div className="flex flex-col gap-2.5 mt-auto">
              <div className="flex flex-row gap-2 w-full">
-               <button className="flex-1 py-1.5 bg-white border border-[#5C9963] text-[#5C9963] rounded-lg font-medium text-[11px] flex items-center justify-center gap-1.5 active:scale-95 transition-transform">
+               <button 
+                 onClick={handleCustomize}
+                 className="flex-1 py-1.5 bg-white border border-[#5C9963] text-[#5C9963] rounded-lg font-medium text-[11px] flex items-center justify-center gap-1.5 active:scale-95 transition-transform">
                  <Utensils size={14} />
                  Customize
                </button>
@@ -214,7 +225,9 @@ export default function MenuItemCard({ product }) {
                 </div>
 
                 <div className="flex flex-col md:flex-row gap-3 w-full">
-                  <div className="w-full md:flex-1 h-[48px] md:h-[45px] border-2 border-[#5C9963] rounded-full flex items-center justify-center group hover:bg-[#5C9963] duration-300 cursor-pointer bg-white transition-colors">
+                  <div 
+                    onClick={handleCustomize}
+                    className="w-full md:flex-1 h-[48px] md:h-[45px] border-2 border-[#5C9963] rounded-full flex items-center justify-center group hover:bg-[#5C9963] duration-300 cursor-pointer bg-white transition-colors">
                     <Utensils
                       strokeWidth={1.5}
                       size={20}
