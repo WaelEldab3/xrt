@@ -5,12 +5,12 @@ import * as Dialog from "@radix-ui/react-dialog";
 export default function ViewItems({ product }) {
   return (
     <Dialog.Root>
-      <div className="w-[330px]">
+      <div className="w-full">
         <div className="relative group">
           <img
             src={product.src}
             alt={product.name}
-            className="w-[330px] h-[320px] object-cover rounded-[18px]"
+            className="w-full h-[320px] object-cover rounded-[18px]"
           />
 
           <Dialog.Trigger asChild>
@@ -118,7 +118,7 @@ export default function ViewItems({ product }) {
                   <div className="flex items-center w-[70px] h-[40px] border-2 border-gray-200 rounded-[10px] overflow-hidden">
                     <button
                       onClick={() => {
-                        const input = document.getElementById("qty");
+                        const input = document.getElementById(`qty-${product.id}`);
                         input.value = Math.max(1, Number(input.value) - 1);
                       }}
                       className="w-10 h-full flex items-center pb-1 justify-center text-xl font-bold text-gray-600 hover:bg-gray-100"
@@ -127,7 +127,7 @@ export default function ViewItems({ product }) {
                     </button>
 
                     <input
-                      id="qty"
+                      id={`qty-${product.id}`}
                       type="number"
                       defaultValue={1}
                       className="w-full h-full text-center outline-none border-none [appearance:textfield] caret-transparent "
@@ -136,7 +136,7 @@ export default function ViewItems({ product }) {
                     
                     <button
                       onClick={() => {
-                        const input = document.getElementById("qty");
+                        const input = document.getElementById(`qty-${product.id}`);
                         input.value = Number(input.value) + 1;
                       }}
                       className="w-10 h-full flex pb-0.5 items-center justify-center text-xl font-bold text-gray-600 hover:bg-gray-100"

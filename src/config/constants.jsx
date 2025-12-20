@@ -195,6 +195,7 @@ export const cards_items = [
   },
 ];
 export const Menus = ["Pizza", "Vegetables", "Fruits", "Bread", "Meat"];
+// Original products
 export const products = [
   {
     id: 1,

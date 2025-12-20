@@ -13,7 +13,7 @@ const Home = () => {
       <Sliderfun />
       <Categories />
       <AdsList />
-      <Menulist />
+      <Menulist variant="home" initialCategory="Pizza" limit={8} />
       <TopRated />
       <Testimonials />
     </>
