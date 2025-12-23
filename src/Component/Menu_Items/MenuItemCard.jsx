@@ -2,18 +2,27 @@ import React from "react";
 import { Handbag, Eye, Utensils, X } from "lucide-react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../../context/CartContext";
+import { COLORS } from "../../config/colors";
 
 export default function MenuItemCard({ product }) {
   const navigate = useNavigate();
+  const { addToCart } = useCart();
   
   const handleCustomize = () => {
      navigate('/customize', { state: { product } });
   };
 
+  const styleVars = {
+    '--primary': COLORS.primary,
+    '--text-primary': COLORS.textPrimary,
+    '--text-secondary': COLORS.textSecondary,
+    '--text-gray': COLORS.textGray,
+  };
+
   return (
     <Dialog.Root>
-      {/* Desktop Layout */}
-      <div className="hidden md:block w-full">
+      <div className="hidden md:block w-full" style={styleVars}>
         <div className="relative group">
           <img
             src={product.src}
@@ -45,49 +54,46 @@ export default function MenuItemCard({ product }) {
           </Dialog.Trigger>
 
           <div className="absolute -bottom-5 left-1/2 -translate-x-1/2">
-            <div className="flex items-center gap-1 px-4 py-1 rounded-full bg-[#5C9963] text-white shadow-md">
+            <div className="flex items-center gap-1 px-4 py-1 rounded-full bg-[var(--primary)] text-white shadow-md">
               <span className="text-[17px] font-bold">{product.price}</span>
             </div>
           </div>
         </div>
 
-        <h3 className="mt-8 mb-3 text-[13px] font-[500] text-[#3D4B3E] text-center">
+        <h3 className="mt-8 mb-3 text-[13px] font-[500] text-[var(--text-secondary)] text-center">
           {product.name}
         </h3>
 
-        {/* Action Buttons */}
-        <div className="flex flex-col gap-2">
-          {/* Customize It Button */}
+        <div className="flex flex-row gap-3 px-4 pb-4">
           <div 
              onClick={handleCustomize}
-             className="w-[250px] h-[40px] border-2 border-gray-100 rounded-full flex items-center justify-center group hover:bg-[#5C9963] duration-300 cursor-pointer mx-auto">
+             className="flex-1 h-[40px] border-2 border-gray-100 rounded-full flex items-center justify-center group hover:bg-[var(--primary)] duration-300 cursor-pointer">
             <Utensils
               strokeWidth={0.8}
               size={20}
-              className="text-[#5C9963] group-hover:text-white duration-300"
+              className="text-[var(--primary)] group-hover:text-white duration-300"
             />
-            <h5 className="ml-3 text-[#737574] text-base group-hover:text-white duration-300">
+            <h5 className="ml-2 text-[var(--text-gray)] text-sm font-medium group-hover:text-white duration-300 truncate">
               Customize It
             </h5>
           </div>
 
-          {/* Order Now Button */}
-          <div className="w-[250px] h-[40px] border-2  border-gray-100 rounded-full flex items-center justify-center group hover:bg-[#5C9963] duration-300 cursor-pointer mx-auto">
+          <div 
+            onClick={() => addToCart(product)}
+            className="flex-1 h-[40px] border-2 border-gray-100 rounded-full flex items-center justify-center group hover:bg-[var(--primary)] duration-300 cursor-pointer">
             <Handbag
               strokeWidth={0.8}
               size={20}
-              className="text-[#5C9963] group-hover:text-white duration-300"
+              className="text-[var(--primary)] group-hover:text-white duration-300"
             />
-            <h5 className="ml-3 text-[#737574] text-base group-hover:text-white duration-300">
+            <h5 className="ml-2 text-[var(--text-gray)] text-sm font-medium group-hover:text-white duration-300 truncate">
               Order Now
             </h5>
           </div>
         </div>
       </div>
 
-      {/* Mobile Layout (Redesigned) */}
-      <div className="md:hidden w-[94%] mx-auto bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col mb-4">
-        {/* Image Area */}
+      <div className="md:hidden w-[94%] mx-auto bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col mb-4" style={styleVars}>
         <div className="relative h-64 w-full bg-gray-50">
            <img
             src={product.src}
@@ -101,13 +107,12 @@ export default function MenuItemCard({ product }) {
           </Dialog.Trigger>
         </div>
        
-        {/* Content Area */}
         <div className="p-4 flex flex-col gap-3">
           <div className="flex justify-between items-start">
              <h3 className="text-base font-bold text-gray-800 leading-tight">
               {product.name}
             </h3>
-            <span className="text-green-600 font-bold text-base whitespace-nowrap ml-2">
+            <span className="text-[var(--primary)] font-bold text-base whitespace-nowrap ml-2">
               {product.price}
             </span>
           </div>
@@ -120,11 +125,13 @@ export default function MenuItemCard({ product }) {
              <div className="flex flex-row gap-2 w-full">
                <button 
                  onClick={handleCustomize}
-                 className="flex-1 py-1.5 bg-white border border-[#5C9963] text-[#5C9963] rounded-lg font-medium text-[11px] flex items-center justify-center gap-1.5 active:scale-95 transition-transform">
+                 className="flex-1 py-1.5 bg-white border border-[var(--primary)] text-[var(--primary)] rounded-lg font-medium text-[11px] flex items-center justify-center gap-1.5 active:scale-95 transition-transform">
                  <Utensils size={14} />
                  Customize
                </button>
-               <button className="flex-1 py-1.5 bg-[#5C9963] text-white rounded-lg font-medium text-[11px] flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-transform">
+               <button 
+                 onClick={() => addToCart(product)}
+                 className="flex-1 py-1.5 bg-[var(--primary)] text-white rounded-lg font-medium text-[11px] flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-transform">
                  <Handbag size={14} />
                  Order
                </button>
@@ -136,6 +143,7 @@ export default function MenuItemCard({ product }) {
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50" />
         <Dialog.Content
+          style={styleVars}
           className="
             fixed z-50
             top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
@@ -177,11 +185,11 @@ export default function MenuItemCard({ product }) {
 
             <div className="w-full md:w-1/2 flex flex-col gap-4">
               <div className="pr-8 md:pr-0">
-                <Dialog.Title className="text-xl md:text-2xl font-semibold text-[#2F3E30] leading-tight">
+                <Dialog.Title className="text-xl md:text-2xl font-semibold text-[var(--text-primary)] leading-tight">
                     {product.name}
                 </Dialog.Title>
 
-                <p className="text-[#5C9963] text-xl md:text-2xl font-bold mt-1">
+                <p className="text-[var(--primary)] text-xl md:text-2xl font-bold mt-1">
                     {product.price}
                 </p>
               </div>
@@ -227,18 +235,24 @@ export default function MenuItemCard({ product }) {
                 <div className="flex flex-col md:flex-row gap-3 w-full">
                   <div 
                     onClick={handleCustomize}
-                    className="w-full md:flex-1 h-[48px] md:h-[45px] border-2 border-[#5C9963] rounded-full flex items-center justify-center group hover:bg-[#5C9963] duration-300 cursor-pointer bg-white transition-colors">
+                    className="w-full md:flex-1 h-[48px] md:h-[45px] border-2 border-[var(--primary)] rounded-full flex items-center justify-center group hover:bg-[var(--primary)] duration-300 cursor-pointer bg-white transition-colors">
                     <Utensils
                       strokeWidth={1.5}
                       size={20}
-                      className="text-[#5C9963] group-hover:text-white duration-300"
+                      className="text-[var(--primary)] group-hover:text-white duration-300"
                     />
-                    <h5 className="ml-2 text-[#5C9963] group-hover:text-white duration-300 font-bold text-sm md:text-base">
+                    <h5 className="ml-2 text-[var(--primary)] group-hover:text-white duration-300 font-bold text-sm md:text-base">
                       Customize It
                     </h5>
                   </div>
 
-                  <div className="w-full md:flex-1 h-[48px] md:h-[45px] border-2 border-[#5C9963] rounded-full flex items-center justify-center group hover:bg-green-700 duration-300 cursor-pointer bg-[#5C9963] transition-colors">
+                  <div 
+                    onClick={() => {
+                        const input = document.getElementById(`qty-${product.id}`);
+                        const qty = Number(input.value) || 1;
+                        addToCart(product, qty);
+                    }}
+                    className="w-full md:flex-1 h-[48px] md:h-[45px] border-2 border-[var(--primary)] rounded-full flex items-center justify-center group hover:bg-green-700 duration-300 cursor-pointer bg-[var(--primary)] transition-colors">
                     <Handbag
                       strokeWidth={1.5}
                       size={20}

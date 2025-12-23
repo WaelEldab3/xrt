@@ -1,7 +1,7 @@
 import { Mail, MapPinned, PhoneCall } from "lucide-react";
 import React from "react";
 import { CONTACT_INFO } from "../../config/constants";
-import Contact from "./../../pages/Contact";
+
 
 export default function Information() {
   return (

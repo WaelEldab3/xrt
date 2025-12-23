@@ -1,9 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const CatCard = ({ item}) => {
+const CatCard = ({ item }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/menu", { state: { selectedCategory: item.name } });
+  };
+
   return (
     <div
-      className=" p-4  rounded-full  lg:h-[130px] lg:w-[130px] md:w-[140px] md:h-[140px] w-[200px] h-[200px]"
+      onClick={handleClick}
+      className="p-4 rounded-full lg:h-[130px] lg:w-[130px] md:w-[140px] md:h-[140px] w-[200px] h-[200px] cursor-pointer"
       style={{ backgroundColor: item.bg }}
     >
       <img

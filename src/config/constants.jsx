@@ -117,63 +117,65 @@ export const images_slider = [
     offer: "Sale 30% Off",
   },
 ];
+import { COLORS } from "./colors";
+
 export const Categories_items = [
   {
-    bg: "#FEEFA3",
+    bg: COLORS.categoryMarrow,
     src: item1,
     name: "Marrow",
     products: 12,
   },
   {
-    bg: "#C9DD7E",
+    bg: COLORS.categoryFruits,
     src: item2,
     name: "Fruits",
     products: 30,
   },
   {
-    bg: "#F3D5AE",
+    bg: COLORS.categoryLeafy,
     src: item3,
     name: "leafy Green",
     products: 20,
   },
   {
-    bg: "#9FB770",
+    bg: COLORS.categoryCookies,
     src: item4,
     name: "Cookies",
     products: 10,
   },
   {
-    bg: "#E4E662",
+    bg: COLORS.categoryVegan,
     src: item5,
     name: "Vegan Cuisine",
     products: 15,
   },
   {
-    bg: "#FEEFA3",
+    bg: COLORS.categoryMarrow,
     src: item1,
     name: "Marrow",
     products: 12,
   },
   {
-    bg: "#C9DD7E",
+    bg: COLORS.categoryFruits,
     src: item2,
     name: "Fruits",
     products: 30,
   },
   {
-    bg: "#F3D5AE",
+    bg: COLORS.categoryLeafy,
     src: item3,
     name: "leafy Green",
     products: 20,
   },
   {
-    bg: "#9FB770",
+    bg: COLORS.categoryCookies,
     src: item4,
     name: "Cookies",
     products: 10,
   },
   {
-    bg: "#E4E662",
+    bg: COLORS.categoryVegan,
     src: item5,
     name: "Vegan Cuisine",
     products: 15,
@@ -184,24 +186,96 @@ export const cards_items = [
     src: card1,
     title: "Fresh Vegetables",
     offer: "- 15% OFF",
-    offer_color: "#ffffff",
+    offer_color: COLORS.white,
   },
   {
     src: card2,
     title: "Vegan Restaurants",
     offer: "- 35% OFF",
-    offer_color: "#CFF92F",
+    offer_color: COLORS.offerLime,
   },
   {
     src: card3,
     title: "Every Weekend",
     offer: "- 25% OFF",
-    offer_color: "#C73044",
+    offer_color: COLORS.offerRed,
   },
 ];
-export const Menus = ["Pizza", "Vegetables", "Fruits", "Bread", "Meat"];
+
 // Original products
 export const products = [
+  {
+    id: 1,
+    src: product1,
+    name: "Papaya Single",
+    price: "£746.64",
+    category: "Fruits",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+  },
+  {
+    id: 2,
+    src: product2,
+    name: "Papaya SingleCauliflower Pack 350g",
+    price: "£74.61",
+    category: "Fruits",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+  },
+  {
+    id: 3,
+    src: product3,
+    name: "Kiwi Fruit Single",
+    price: "£414.14",
+    category: "Fruits",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+  },
+  {
+    id: 4,
+    src: product4,
+    name: "Large Queen Apple",
+    price: "£284.12",
+    category: "Fruits",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+  },
+  {
+    id: 1,
+    src: product1,
+    name: "Papaya Single",
+    price: "£746.64",
+    category: "Fruits",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+  },
+  {
+    id: 2,
+    src: product2,
+    name: "Papaya SingleCauliflower Pack 350g",
+    price: "£74.61",
+    category: "Fruits",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+  },
+  {
+    id: 3,
+    src: product3,
+    name: "Kiwi Fruit Single",
+    price: "£414.14",
+    category: "Fruits",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+  },
+  {
+    id: 4,
+    src: product4,
+    name: "Large Queen Apple",
+    price: "£284.12",
+    category: "Fruits",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
+  },
   {
     id: 1,
     src: product1,
@@ -243,7 +317,7 @@ export const products = [
     src: product5,
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
-    category: "Vegetables",
+    category: "leafy Green",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -252,7 +326,7 @@ export const products = [
     src: product6,
     name: "Cauliflower Pack 350g",
     price: "£324.45",
-    category: "Vegetables",
+    category: "leafy Green",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -261,7 +335,7 @@ export const products = [
     src: product7,
     name: "Freshmark Cut Spinach",
     price: "£411.87",
-    category: "Vegetables",
+    category: "leafy Green",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -270,7 +344,7 @@ export const products = [
     src: product8,
     name: "Steers Tomato Pack 375ml",
     price: "£64.90",
-    category: "Vegetables",
+    category: "leafy Green",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -279,7 +353,7 @@ export const products = [
     src: product9,
     name: "Kiwi Fruit Single",
     price: "£414.14",
-    category: "Bread",
+    category: "Cookies",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -288,7 +362,7 @@ export const products = [
     src: product10,
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
-    category: "Bread",
+    category: "Cookies",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -297,7 +371,7 @@ export const products = [
     src: product11,
     name: "East Coast Small Solo Fish",
     price: "£814.21",
-    category: "Bread",
+    category: "Cookies",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -306,7 +380,7 @@ export const products = [
     src: product12,
     name: "Papaya Single",
     price: "£204.19",
-    category: "Bread",
+    category: "Cookies",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -315,7 +389,7 @@ export const products = [
     src: product13,
     name: "Large Queen Apple",
     price: "£903.62",
-    category: "Bread",
+    category: "Cookies",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -324,7 +398,7 @@ export const products = [
     src: product14,
     name: "Mixed Chillies Pack 500g",
     price: "£674.89",
-    category: "Bread",
+    category: "Cookies",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -333,7 +407,7 @@ export const products = [
     src: product15,
     name: "Freshmark Cut Spinach",
     price: "£134.60",
-    category: "Vegetables",
+    category: "leafy Green",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -342,7 +416,7 @@ export const products = [
     src: product16,
     name: "Steers Tomato Pack 375ml",
     price: "£36.26",
-    category: "Pizza",
+    category: "Vegan Cuisine",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -351,7 +425,7 @@ export const products = [
     src: product17,
     name: "Large Queen Apple",
     price: "£234.81",
-    category: "Pizza",
+    category: "Vegan Cuisine",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -360,7 +434,7 @@ export const products = [
     src: product18,
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
-    category: "Pizza",
+    category: "Vegan Cuisine",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -369,7 +443,7 @@ export const products = [
     src: product19,
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
-    category: "Pizza",
+    category: "Vegan Cuisine",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -378,7 +452,7 @@ export const products = [
     src: product20,
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
-    category: "Pizza",
+    category: "Vegan Cuisine",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -387,7 +461,7 @@ export const products = [
     src: product21,
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
-    category: "Pizza",
+    category: "Vegan Cuisine",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -396,7 +470,7 @@ export const products = [
     src: product22,
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
-    category: "Meat",
+    category: "Marrow",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -405,7 +479,7 @@ export const products = [
     src: product23,
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
-    category: "Meat",
+    category: "Marrow",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -414,7 +488,7 @@ export const products = [
     src: product24,
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
-    category: "Meat",
+    category: "Marrow",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -423,7 +497,7 @@ export const products = [
     src: product25,
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
-    category: "Meat",
+    category: "Marrow",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -432,7 +506,7 @@ export const products = [
     src: product26,
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
-    category: "Meat",
+    category: "Marrow",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -441,7 +515,7 @@ export const products = [
     src: product27,
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
-    category: "Meat",
+    category: "Marrow",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -450,7 +524,7 @@ export const products = [
     src: product28,
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
-    category: "Pizza",
+    category: "Vegan Cuisine",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },
@@ -459,7 +533,7 @@ export const products = [
     src: product29,
     name: "Mixed Chillies Pack 500g",
     price: "£164.53",
-    category: "Meat",
+    category: "Marrow",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this text with product description from your data.",
   },

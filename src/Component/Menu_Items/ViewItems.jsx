@@ -1,11 +1,22 @@
 import React from "react";
 import { Handbag, Eye } from "lucide-react";
 import * as Dialog from "@radix-ui/react-dialog";
+import { useCart } from "../../context/CartContext";
+import { COLORS } from "../../config/colors";
 
 export default function ViewItems({ product }) {
+  const { addToCart } = useCart();
+
+  const styleVars = {
+    '--primary': COLORS.primary,
+    '--text-primary': COLORS.textPrimary,
+    '--text-secondary': COLORS.textSecondary,
+    '--text-gray': COLORS.textGray,
+  };
+
   return (
     <Dialog.Root>
-      <div className="w-full">
+      <div className="w-full" style={styleVars}>
         <div className="relative group">
           <img
             src={product.src}
@@ -37,23 +48,25 @@ export default function ViewItems({ product }) {
           </Dialog.Trigger>
 
           <div className="absolute -bottom-5 left-1/2 -translate-x-1/2">
-            <div className="flex items-center gap-1 px-4 py-1 rounded-full bg-[#5C9963] text-white shadow-md">
+            <div className="flex items-center gap-1 px-4 py-1 rounded-full bg-[var(--primary)] text-white shadow-md">
               <span className="text-[17px] font-bold">{product.price}</span>
             </div>
           </div>
         </div>
 
-        <h3 className="mt-8 mb-3 text-[13px] font-[500] text-[#3D4B3E] text-center">
+        <h3 className="mt-8 mb-3 text-[13px] font-[500] text-[var(--text-secondary)] text-center">
           {product.name}
         </h3>
 
-        <div className="w-[250px] h-[40px] border-2  border-gray-100 rounded-full flex items-center justify-center group hover:bg-[#5C9963] duration-300 cursor-pointer mx-auto">
+        <div 
+          onClick={() => addToCart(product)}
+          className="w-[250px] h-[40px] border-2  border-gray-100 rounded-full flex items-center justify-center group hover:bg-[var(--primary)] duration-300 cursor-pointer mx-auto">
           <Handbag
             strokeWidth={0.8}
             size={20}
-            className="text-[#5C9963] group-hover:text-white duration-300"
+            className="text-[var(--primary)] group-hover:text-white duration-300"
           />
-          <h5 className="ml-3 text-[#737574] group-hover:text-white duration-300">
+          <h5 className="ml-3 text-[var(--text-gray)] group-hover:text-white duration-300">
             Order Now
           </h5>
         </div>
@@ -62,6 +75,7 @@ export default function ViewItems({ product }) {
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50" />
         <Dialog.Content
+          style={styleVars}
           className="
             fixed z-50
             top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
@@ -102,11 +116,11 @@ export default function ViewItems({ product }) {
             </div>
 
             <div className="w-full md:w-1/2 flex flex-col gap-4">
-              <Dialog.Title className="text-2xl font-semibold text-[#2F3E30] ">
+              <Dialog.Title className="text-2xl font-semibold text-[var(--text-primary)] ">
                 {product.name}
               </Dialog.Title>
 
-              <p className="text-[#5C9963] text-2xl font-bold">
+              <p className="text-[var(--primary)] text-2xl font-bold">
                 {product.price}
               </p>
 
@@ -146,13 +160,19 @@ export default function ViewItems({ product }) {
                   </div>
                 </div>
 
-                <div className="w-[250px] h-[40px] border-2 border-gray-100 rounded-full flex items-center justify-center group hover:bg-[#5C9963] duration-300 cursor-pointer mx-auto">
+                <div 
+                  onClick={() => {
+                      const input = document.getElementById(`qty-${product.id}`);
+                      const qty = Number(input.value) || 1;
+                      addToCart(product, qty);
+                  }}
+                  className="w-[250px] h-[40px] border-2 border-gray-100 rounded-full flex items-center justify-center group hover:bg-[var(--primary)] duration-300 cursor-pointer mx-auto">
                   <Handbag
                     strokeWidth={0.8}
                     size={20}
-                    className="text-[#5C9963] group-hover:text-white duration-300"
+                    className="text-[var(--primary)] group-hover:text-white duration-300"
                   />
-                  <h5 className="ml-3 text-[#737574] group-hover:text-white duration-300">
+                  <h5 className="ml-3 text-[var(--text-gray)] group-hover:text-white duration-300">
                     Add to Cart
                   </h5>
                 </div>
@@ -164,3 +184,4 @@ export default function ViewItems({ product }) {
     </Dialog.Root>
   );
 }
+
