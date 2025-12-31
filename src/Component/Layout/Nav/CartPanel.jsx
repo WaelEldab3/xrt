@@ -108,8 +108,17 @@ export default function CartPanel({ open, setclosefun }) {
               </div>
               
               <div className="flex flex-col gap-3">
+                <button 
+                  onClick={() => {
+                    navigate('/cart');
+                    setclosefun();
+                  }}
+                  className="w-full py-3 bg-[var(--primary)] text-white font-bold rounded-full hover:bg-green-700 transition-colors shadow-lg shadow-green-200 cursor-pointer text-sm tracking-wide"
+                >
+                  View Cart
+                </button>
                 <button className="w-full py-3 bg-[var(--primary)] text-white font-bold rounded-full hover:bg-green-700 transition-colors shadow-lg shadow-green-200 cursor-pointer text-sm tracking-wide">
-                  CHECKOUT
+                  Checkout
                 </button>
               </div>
             </div>

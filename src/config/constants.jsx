@@ -59,6 +59,7 @@ import Contact from "../pages/Contact";
 import Home from "../pages/Home";
 import Menu from "../pages/Menu";
 import Customize from "../pages/Customize";
+import Cart from "../pages/Cart";
 
 import footer from "../assets/images/footer/imgi_134_footer_bg.png.webp"
 import payment from "../assets/images/footer/footer_01-2.png.webp"
@@ -100,6 +101,10 @@ export const routes = [
   {
     path: "/customize",
     element: <Customize />,
+  },
+  {
+    path: "/cart",
+    element: <Cart />,
   }
 ];
 
