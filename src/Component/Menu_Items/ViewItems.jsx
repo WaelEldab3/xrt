@@ -1,11 +1,17 @@
 import React from "react";
-import { Handbag, Eye } from "lucide-react";
+import { Handbag, Eye, Utensils } from "lucide-react";
 import * as Dialog from "@radix-ui/react-dialog";
+import { useNavigate } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
 import { COLORS } from "../../config/colors";
 
 export default function ViewItems({ product }) {
+  const navigate = useNavigate();
   const { addToCart } = useCart();
+  
+  const handleCustomize = () => {
+     navigate('/customize', { state: { product } });
+  };
 
   const styleVars = {
     '--primary': COLORS.primary,
@@ -58,17 +64,32 @@ export default function ViewItems({ product }) {
           {product.name}
         </h3>
 
-        <div 
-          onClick={() => addToCart(product)}
-          className="w-[250px] h-[40px] border-2  border-gray-100 rounded-full flex items-center justify-center group hover:bg-[var(--primary)] duration-300 cursor-pointer mx-auto">
-          <Handbag
-            strokeWidth={0.8}
-            size={20}
-            className="text-[var(--primary)] group-hover:text-white duration-300"
-          />
-          <h5 className="ml-3 text-[var(--text-gray)] group-hover:text-white duration-300">
-            Order Now
-          </h5>
+        <div className="flex flex-row gap-3 px-4 pb-4 justify-center">
+          <div 
+             onClick={handleCustomize}
+             className="flex-1 h-[40px] border-2 border-gray-100 rounded-full flex items-center justify-center group hover:bg-[var(--primary)] duration-300 cursor-pointer">
+            <Utensils
+              strokeWidth={0.8}
+              size={20}
+              className="text-[var(--primary)] group-hover:text-white duration-300"
+            />
+            <h5 className="ml-2 text-[var(--text-gray)] text-sm font-medium group-hover:text-white duration-300 truncate">
+              Customize It
+            </h5>
+          </div>
+
+          <div 
+            onClick={() => addToCart(product)}
+            className="flex-1 h-[40px] border-2 border-gray-100 rounded-full flex items-center justify-center group hover:bg-[var(--primary)] duration-300 cursor-pointer">
+            <Handbag
+              strokeWidth={0.8}
+              size={20}
+              className="text-[var(--primary)] group-hover:text-white duration-300"
+            />
+            <h5 className="ml-2 text-[var(--text-gray)] text-sm font-medium group-hover:text-white duration-300 truncate">
+              Add To Cart
+            </h5>
+          </div>
         </div>
       </div>
 
@@ -127,15 +148,15 @@ export default function ViewItems({ product }) {
               <p className="text-sm text-gray-600 leading-relaxed">
                 {product.description}
               </p>
-              <div className="flex justify-around">
-                <div className="flex items-center gap-2">
-                  <div className="flex items-center w-[70px] h-[40px] border-2 border-gray-200 rounded-[10px] overflow-hidden">
+              <div className="flex flex-col gap-4 w-full">
+                <div className="flex items-center gap-2 justify-center lg:justify-start">
+                  <div className="flex items-center w-[120px] h-[40px] border-2 border-gray-200 rounded-[10px] overflow-hidden bg-white">
                     <button
                       onClick={() => {
                         const input = document.getElementById(`qty-${product.id}`);
                         input.value = Math.max(1, Number(input.value) - 1);
                       }}
-                      className="w-10 h-full flex items-center pb-1 justify-center text-xl font-bold text-gray-600 hover:bg-gray-100"
+                      className="w-10 h-full flex items-center pb-1 justify-center text-xl font-bold text-gray-600 hover:bg-gray-50"
                     >
                       -
                     </button>
@@ -144,7 +165,7 @@ export default function ViewItems({ product }) {
                       id={`qty-${product.id}`}
                       type="number"
                       defaultValue={1}
-                      className="w-full h-full text-center outline-none border-none [appearance:textfield] caret-transparent "
+                      className="w-full h-full text-center outline-none border-none [appearance:textfield] caret-transparent text-lg font-medium text-gray-700"
                     />
 
                     
@@ -153,28 +174,43 @@ export default function ViewItems({ product }) {
                         const input = document.getElementById(`qty-${product.id}`);
                         input.value = Number(input.value) + 1;
                       }}
-                      className="w-10 h-full flex pb-0.5 items-center justify-center text-xl font-bold text-gray-600 hover:bg-gray-100"
+                      className="w-10 h-full flex pb-0.5 items-center justify-center text-xl font-bold text-gray-600 hover:bg-gray-50"
                     >
                       +
                     </button>
                   </div>
                 </div>
 
-                <div 
-                  onClick={() => {
-                      const input = document.getElementById(`qty-${product.id}`);
-                      const qty = Number(input.value) || 1;
-                      addToCart(product, qty);
-                  }}
-                  className="w-[250px] h-[40px] border-2 border-gray-100 rounded-full flex items-center justify-center group hover:bg-[var(--primary)] duration-300 cursor-pointer mx-auto">
-                  <Handbag
-                    strokeWidth={0.8}
-                    size={20}
-                    className="text-[var(--primary)] group-hover:text-white duration-300"
-                  />
-                  <h5 className="ml-3 text-[var(--text-gray)] group-hover:text-white duration-300">
-                    Add to Cart
-                  </h5>
+                <div className="flex flex-col md:flex-row gap-3 w-full">
+                  <div 
+                    onClick={handleCustomize}
+                    className="w-full md:flex-1 h-[48px] md:h-[45px] border-2 border-[var(--primary)] rounded-full flex items-center justify-center group hover:bg-[var(--primary)] duration-300 cursor-pointer bg-white transition-colors">
+                    <Utensils
+                      strokeWidth={1.5}
+                      size={20}
+                      className="text-[var(--primary)] group-hover:text-white duration-300"
+                    />
+                    <h5 className="ml-2 text-[var(--primary)] group-hover:text-white duration-300 font-bold text-sm md:text-base">
+                      Customize It
+                    </h5>
+                  </div>
+
+                  <div 
+                    onClick={() => {
+                        const input = document.getElementById(`qty-${product.id}`);
+                        const qty = Number(input.value) || 1;
+                        addToCart(product, qty);
+                    }}
+                    className="w-full md:flex-1 h-[48px] md:h-[45px] border-2 border-[var(--primary)] rounded-full flex items-center justify-center group hover:bg-green-700 duration-300 cursor-pointer bg-[var(--primary)] transition-colors">
+                    <Handbag
+                      strokeWidth={1.5}
+                      size={20}
+                      className="text-white duration-300"
+                    />
+                    <h5 className="ml-2 text-white duration-300 font-bold text-sm md:text-base">
+                      Add to Cart
+                    </h5>
+                  </div>
                 </div>
               </div>
             </div>

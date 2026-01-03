@@ -87,7 +87,7 @@ export default function MenuItemCard({ product }) {
               className="text-[var(--primary)] group-hover:text-white duration-300"
             />
             <h5 className="ml-2 text-[var(--text-gray)] text-sm font-medium group-hover:text-white duration-300 truncate">
-              Order Now
+              Add to Cart
             </h5>
           </div>
         </div>

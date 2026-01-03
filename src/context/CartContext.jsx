@@ -38,10 +38,22 @@ export function CartProvider({ children }) {
     }, 0);
   }, [cartItems]);
 
+  const updateQuantity = (id, delta) => {
+    setCartItems(prev => {
+      return prev.map(item => {
+        if (item.id === id) {
+          return { ...item, qty: item.qty + delta };
+        }
+        return item;
+      }).filter(item => item.qty > 0);
+    });
+  };
+
   const value = {
     cartItems,
     addToCart,
     removeFromCart,
+    updateQuantity,
     cartCount,
     cartTotal
   };

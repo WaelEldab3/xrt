@@ -1,11 +1,11 @@
 import React from 'react';
 import { useCart } from '../context/CartContext';
 import { COLORS } from '../config/colors';
-import { X, ShoppingBag, ArrowLeft } from 'lucide-react';
+import { X, ShoppingBag, ArrowLeft, Plus, Minus } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Cart = () => {
-  const { cartItems, removeFromCart, cartTotal } = useCart();
+  const { cartItems, removeFromCart, updateQuantity, cartTotal } = useCart();
 
   // Helper to parse price string (e.g., "£746.64" -> 746.64)
   const getPriceValue = (priceStr) => {
@@ -33,7 +33,7 @@ const Cart = () => {
           {/* Cart Items List */}
           <div className="flex-1 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
             <div className="hidden md:grid grid-cols-12 gap-4 p-4 bg-gray-50 border-b border-gray-100 text-sm font-semibold text-gray-500 uppercase tracking-wider">
-              <div className="col-span-6">Product</div>
+              <div className="col-span-6 text-center">Product</div>
               <div className="col-span-2 text-center">Price</div>
               <div className="col-span-2 text-center">Quantity</div>
               <div className="col-span-2 text-center">Total</div>
@@ -76,8 +76,20 @@ const Cart = () => {
 
                   {/* Quantity */}
                   <div className="col-span-2 flex justify-center w-full md:w-auto">
-                    <div className="bg-gray-100 rounded-lg px-4 py-2 font-semibold text-gray-700">
-                      Qty: {item.qty}
+                    <div className="flex items-center gap-3 bg-gray-100 rounded-xl px-2 py-1">
+                      <button 
+                        onClick={() => updateQuantity(item.id, -1)}
+                        className="p-2 hover:bg-white rounded-lg transition-colors text-gray-600 hover:text-[var(--primary)]"
+                      >
+                        <Minus size={16} />
+                      </button>
+                      <span className="font-semibold text-gray-900 w-8 text-center">{item.qty}</span>
+                      <button 
+                        onClick={() => updateQuantity(item.id, 1)}
+                        className="p-2 hover:bg-white rounded-lg transition-colors text-gray-600 hover:text-[var(--primary)]"
+                      >
+                        <Plus size={16} />
+                      </button>
                     </div>
                   </div>
 
